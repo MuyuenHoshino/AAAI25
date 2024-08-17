@@ -2,7 +2,7 @@
 
 
 ## Structure
-The DGL and PyG versions are implemented based on Benchmarking-gnn and GraphGPS, respectively.
+The DGL and PyG versions are implemented based on [Benchmarking-gnn](https://github.com/graphdeeplearning/benchmarking-gnns.git) and [GraphGPS](https://github.com/rampasek/GraphGPS.git), respectively.
 ```
 .
 |____README.md
@@ -57,20 +57,35 @@ pip install torch_geometric==2.2.0 -f https://pytorch-geometric.com/whl/torch-1.
 
 ## Data
 
+Under normal circumstances, running the PyG code will automatically download the required datasets. As for DGL SGGN, there are scripts to prepare dataset for each dataset, such as `./SGGN_dgl/data/superpixels/prepare_superpixels_MNIST.ipynb`.
+
+
+However, if you encounter broken links, network errors, or other issues with the script, please obtain the data from [Benchmarking-gnn](https://github.com/graphdeeplearning/benchmarking-gnns.git) and [GraphGPS](https://github.com/rampasek/GraphGPS.git).
+
+
 Please download data from Benchmarking-gnn and arrange them like this for DGL SGGN.
 ```
 .
 |____data
 |____data.py
 |____molecules
+| |____prepare_molecules.ipynb
 |____molecules.py
 | |____test.index
 | |____train.index
 | |____val.index
 | |____ZINC.pkl
+|______pycache__
+| |____data.cpython-38.pyc
+| |____molecules.cpython-38.pyc
+| |____random.cpython-38.pyc
+| |____SBMs.cpython-38.pyc
+| |____superpixels.cpython-38.pyc
+| |____TUs.cpython-38.pyc
 |____random.py
 |____SBMs
 | |____meta.txt
+| |____prepare_SBM_PATTERN.ipynb
 |____SBMs.py
 | |____SBM_CLUSTER.pkl
 | |____SBM_PATTERN.pkl
