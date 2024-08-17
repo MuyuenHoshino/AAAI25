@@ -1,0 +1,22 @@
+#common
+**/*.DS_Store
+**/*.ipynb_checkpoints/
+**/__pycache__
+
+SGGN_dgl/out/
+
+
+#SBM datasets
+SGGN_dgl/data/SBMs/*.pkl
+
+#ZINC dataset
+SGGN_dgl/data/molecules/*.pkl
+
+#MNIST datasets
+SGGN_dgl/data/superpixels/*.pkl
+SGGN_dgl/data/superpixels/*.zip
+
+
+SGGN_pyg/datasets/
+SGGN_pyg/pretrained/
+SGGN_pyg/results/
